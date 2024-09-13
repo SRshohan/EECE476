@@ -5,7 +5,7 @@ clang++ main.cpp -o main
 
 ### To run the complied file
 ```sh
-./main
+./main <filename>
 ```
 
 ### Video Link: 
