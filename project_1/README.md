@@ -9,4 +9,4 @@ clang++ main.cpp -o main
 ```
 
 ### Video Link: 
-(Youtube)[https://youtu.be/hUsml_BbLog]
+(Youtube)[https://youtu.be/0yG1CJw3EMI]
