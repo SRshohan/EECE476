@@ -37,7 +37,7 @@ The simulation results in a dynamic evolution of cells based on the provided rul
 
 ![Output 2 Example](/project_1/Output2.png)
 
-![Output Example for first input 1 file](/project_1/Screenshot%202024-09-13%20at%207.16.51 PM.png)
+
 
 The project successfully simulates the behavior of the cellular automaton, with the grid evolving correctly based on the birth and survival configurations. The results highlight the importance of initial configurations and how small changes in neighbor counts can lead to significant differences in the grid's evolution.
 
