@@ -66,10 +66,6 @@ This project demonstrates the implementation of an object-oriented programming (
 The program initializes various courses, students, and teachers. After adding courses to the students and teachers, it demonstrates operator overloading by comparing students based on their course enrollments. The program also showcases runtime polymorphism by calling the `printname` method on an array of `Person` pointers, which refers to both `Student` and `Teacher` objects.
 
 
-#### Explanation
-
-This output displays the courses enrolled by the students and the courses taught by the teachers. Each student's and teacher's name is printed alongside their respective courses, providing a clear view of the educational structure.
-
 ## Conclusion
 
 This project effectively illustrates the fundamental concepts of object-oriented programming in C++. By utilizing classes and inheritance, the code manages the complexity of an educational system efficiently. The use of virtual functions and operator overloading enhances flexibility and usability, demonstrating how C++ can be leveraged to build robust applications.
