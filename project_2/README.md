@@ -59,7 +59,7 @@ This project demonstrates the implementation of an object-oriented programming (
 
 ### Screenshot 1: Program Execution
 
-![Program Output](screenshots/output.png) 
+![Program Output](output.png) 
 
 #### Explanation
 
