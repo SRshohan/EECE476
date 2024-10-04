@@ -1,28 +1,22 @@
-#ifndef STDUENT_H
-#define STUDENT_H
+#ifndef COURSE_H
+#define COURSE_H
 
 #include <string>
-#include <vector>
-using namespace std;
+#include <iostream>
 
-namespace Students{
-    class Student{
-        private:
-            int student_num;
-            vector<string> courses;
-        public:
-            // Constructor
-            Student(int student_num, vector<string> courses);
+class Course {
+private:
+    std::string course_number;
+    std::string course_name;
+    std::string course_description;
 
-            int getStudent_num();
-            void setName(int student_num);
+public:
+    Course(const std::string &course_number, const std::string &course_name, const std::string &course_description) 
+        : course_number(course_number), course_name(course_name), course_description(course_description) {}
 
-            virtual void printcourses();
-            void addCourses(string name);
-            void deleteCourses(string name);
-
-    };
+    std::string getCourseNumber() const { return course_number; }
+    std::string getCourseName() const { return course_name; }
+    std::string getCourseDescription() const { return course_description; }
 };
-
 
 #endif

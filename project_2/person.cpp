@@ -1,46 +1,19 @@
-#include <iostream>
 #include "person.h"
 
-using namespace std;
-using namespace Persona;
+Person::Person(const std::string &name, int age) : name(name), age(age) {}
 
-Person::Person(string name, int age): name(name), age(age) {};
+Person::~Person() {}
 
-//Destructor
-Person::~Person(){};
-
-// Setters and getters
-void Person::setName(string name){
-    this->name = name;
-};
-string Person::getName(){
+std::string Person::getName() const {
     return name;
-};
+}
 
-void Person::setAge(int age){
-    this->age = age;
-};
-
-int Person::getAge(){
+int Person::getAge() const {
     return age;
-};
+}
 
-void Person::printname(){
-    cout << "This is " << name << "." << age << " is the age" << endl;
-};
-
-
-int main(){
-    Person myname("Sohanur", 28);
-    myname.printname();
-
-    // You can also modify and access the name and age
-    myname.setName("John");
-    myname.setAge(30);
-
-    myname.printname();
-
-};
-
+void Person::printname() const {
+    std::cout << "This is " << name << "." << std::endl;
+}
 
 

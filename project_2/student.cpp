@@ -1,54 +1,36 @@
-#include <iostream>
 #include "student.h"
-#include <vector>
-#include "person.h"
 
-using namespace std;
-using namespace Students;
-using namespace Persona;
+Student::Student(const std::string &name, int age, int student_num)
+    : Person(name, age), student_num(student_num) {}
 
+Student::~Student() {}
 
-// Constructor
-Student::Student(int student_num, vector<string> courses): student_num(student_num), courses(courses) {};
-
-//setter and getter
-int Student::getStudent_num(){
+int Student::getStudentNum() const {
     return student_num;
 }
 
-void Student::setStudent_num(int student_num){
-    student_num = student_num;
+void Student::printCourses() const {
+    std::cout << "Courses: ";
+    for (const auto &course : courses) {
+        std::cout << course << " ";
+    }
+    std::cout << std::endl;
 }
 
-void Student::printcourses(){
-    for ( string course: courses){
-        cout << "Course name: " << course << endl;
-    }
+void Student::addCourse(const std::string &course) {
+    courses.push_back(course);
 }
-void Student::addCourses(string course_name){
-    courses.push_back(course_name);
-};
 
-void Student::deleteCourses(){
-    courses.clear();
-};
+void Student::deleteCourse(const std::string &course) {
+    courses.erase(std::remove(courses.begin(), courses.end(), course), courses.end());
+}
 
+bool operator==(const Student &s1, const Student &s2) {
+    return s1.courses == s2.courses;
+}
 
-bool Student::operator==(Student& s1, Student& s2){
-    if ( s1.courses.size() != s2.courses.size()){
-        return false;
-    }else{
-        for (int i = 0; i < s1.courses.size(); i++){
-            if (s1.courses[i] != s2.courses[i]){
-                return false;
-            }
-        }
-        return true;
-    }
-};
-
-void Student::Person::void printname(){
-    cout << 
+void Student::printname() const {
+    std::cout << "This is student " << name << "." << std::endl;
 }
 
 

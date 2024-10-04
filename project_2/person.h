@@ -1,25 +1,28 @@
-// person.h
-
 #ifndef PERSON_H
 #define PERSON_H
 
 #include <string>
-using namespace std;
+#include <iostream>
 
-namespace Persona {
-    class Person{
-       private:
-            int age;
-            string name;
-       public:
-        Person(string name, int age);
-        ~Person();
-        string getName();
-        void setName(string name);
-        int getAge();
-        void setAge(int age);
-        virtual void printname();
-    };
+class Person {
+protected:
+    std::string name;
+    int age;
+
+public:
+    Person(const std::string &name, int age) : name(name), age(age) {}
+    virtual ~Person() {}
+
+    std::string getName() const { return name; }
+    int getAge() const { return age; }
+
+    virtual void printname() const {
+        std::cout << "This is " << name << std::endl;
+    }
+
+    // Pure virtual function for adding courses
+    virtual void addCourse(const std::string &course) = 0;
 };
 
-#endif 
+#endif
+
