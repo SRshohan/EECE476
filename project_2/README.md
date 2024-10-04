@@ -17,8 +17,8 @@ This project demonstrates the implementation of an object-oriented programming (
 2. **Student**
    - **Description**: This class inherits from the `Person` class and represents a student in the educational system. It includes functionality for managing a list of courses the student is enrolled in.
    - **Attributes**:
-     - `std::string studentID`: A unique identifier for the student.
-     - `std::vector<Course> enrolledCourses`: A list of courses the student is currently enrolled in.
+     - `string studentID`: A unique identifier for the student.
+     - `vector<Course> enrolledCourses`: A list of courses the student is currently enrolled in.
    - **Methods**:
      - `void addCourse(Course c)`: Adds a course to the student's list of enrolled courses.
      - `void deleteCourse(Course c)`: Removes a course from the student's list of enrolled courses.
@@ -28,8 +28,8 @@ This project demonstrates the implementation of an object-oriented programming (
 3. **Teacher**
    - **Description**: This class also inherits from the `Person` class and represents a teacher who instructs courses. It includes methods for managing the courses they teach.
    - **Attributes**:
-     - `std::string salary`: The salary of the teacher.
-     - `std::vector<Course> taughtCourses`: A list of courses the teacher is currently teaching.
+     - `string salary`: The salary of the teacher.
+     - `vector<Course> taughtCourses`: A list of courses the teacher is currently teaching.
    - **Methods**:
      - `void printCourses()`: Displays the courses taught by the teacher.
      - `void printname() override`: Implements the base class method to display the teacher's name.
@@ -37,8 +37,8 @@ This project demonstrates the implementation of an object-oriented programming (
 4. **Course**
    - **Description**: This class represents a course offered in the educational system, containing all the necessary information about the course.
    - **Attributes**:
-     - `std::string courseNumber`: A unique identifier for the course.
-     - `std::string courseName`: The name of the course.
+     - `string courseNumber`: A unique identifier for the course.
+     - `string courseName`: The name of the course.
      - `std::string courseDescription`: A description of what the course covers.
    - **Methods**:
      - `void printCourseInfo()`: Displays the course's number, name, and description.
@@ -70,12 +70,6 @@ The program initializes various courses, students, and teachers. After adding co
 
 This project effectively illustrates the fundamental concepts of object-oriented programming in C++. By utilizing classes and inheritance, the code manages the complexity of an educational system efficiently. The use of virtual functions and operator overloading enhances flexibility and usability, demonstrating how C++ can be leveraged to build robust applications.
 
-### Future Work
-
-Further improvements could include:
-- Adding data validation for course enrollment to ensure students do not enroll in the same course multiple times.
-- Implementing file handling to save and load student and teacher data for persistence.
-- Expanding the functionality of the Course class to include prerequisites, schedules, and capacity limits.
 
 ## How to Run
 
