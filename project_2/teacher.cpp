@@ -10,7 +10,7 @@ double Teacher::getSalary() const {
 }
 
 void Teacher::printCourses() const {
-    std::cout << "Courses: ";
+    std::cout << "Teacher Courses: ";
     for (const auto &course : courses) {
         std::cout << course << " " << '\n';
     }

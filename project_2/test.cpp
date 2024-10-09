@@ -50,7 +50,7 @@ int main() {
         std::cout << "Students have different courses." << std::endl;
     }
 
-    // Demonstrate runtime polymorphism
+    // Runtime polymorphism
     for (int i = 0; i < 3; ++i) {
         persons[i]->printname();
     }
