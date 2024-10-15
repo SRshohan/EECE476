@@ -1,0 +1,24 @@
+void Linked_List::PrintList()
+{
+     ListItem *temp;
+
+     cout << "\n\nItems in the List\n";
+     cout << "-----------------------------------------------------------\n";
+     cout << "Key\t\tData\n";
+     cout << "-----------------------------------------------------------\n";
+
+     if(head == NULL)     // Report no items in the list
+     {
+          cout << "\t List is currently empty.\n";
+     }
+     else
+     {
+          temp = head;
+          while(temp != NULL)
+          {
+               cout << temp->key << "\t\t" << temp->theData << "\n";
+               temp=temp->next;
+          }
+     }
+     cout << "-----------------------------------------------------------\n\n";
+}

@@ -1,0 +1,64 @@
+Simple List Demonstration
+(List implemented as an Array - Do not try this at home)
+
+Create a list and add a few tasks to the list
+
+Items in the List
+-----------------------------------------------------------
+Key		Data
+-----------------------------------------------------------
+5		3.1
+1		5.6
+3		8.3
+2		7.4
+4		2.5
+-----------------------------------------------------------
+
+
+List now contains 5items.
+
+Testing delete of last item in list.
+
+
+Items in the List
+-----------------------------------------------------------
+Key		Data
+-----------------------------------------------------------
+5		3.1
+1		5.6
+3		8.3
+2		7.4
+-----------------------------------------------------------
+
+Testing delete of first item in list.
+
+
+Items in the List
+-----------------------------------------------------------
+Key		Data
+-----------------------------------------------------------
+1		5.6
+3		8.3
+2		7.4
+-----------------------------------------------------------
+
+Testing delete of a middle item in list.
+
+
+Items in the List
+-----------------------------------------------------------
+Key		Data
+-----------------------------------------------------------
+1		5.6
+2		7.4
+-----------------------------------------------------------
+
+Testing failure in delete function.
+Unable to locate item to delete.
+Testing Search function. Search for key 3
+Search result: Unable to locate item in list
+Testing Search function. Search for key 2
+Search result: theData = 7.4
+
+
+End list demonstration...
