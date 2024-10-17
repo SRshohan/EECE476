@@ -1,3 +1,6 @@
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
+
 #include <iostream>
 using namespace std;
 
@@ -18,12 +21,13 @@ class Linked_List
           Linked_List();               // Class constructor
           ~Linked_List();              // Class destructor
           void ClearList();             // Remove all items from the list
-          bool Insert(int key, float f);// Add an item to the end of the list
+          void Insert(int key, float f);// Add an item to the end of the list
           bool Delete(int key);         // Delete an item from the list
-          bool Search(int key, float *retVal); // Search for an item in the list
+          void Search(int key, float *retVal); // Search for an item in the list
           int ListLength();             // Return number of items in list
           bool isEmpty();               // Return true if list is empty
           bool isFull();                // Return true if list is full
           void PrintList();             // Print all items in the list
 };
 
+#endif
