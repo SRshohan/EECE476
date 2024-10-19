@@ -1,4 +1,4 @@
-CC = g++
+CC = clang++
 
 project02: listmain.o linked_list.o
 	$(CC) listmain.o linked_list.o -o project02 -g

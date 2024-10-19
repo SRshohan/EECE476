@@ -8,15 +8,24 @@ Linked_List::Linked_List(){
     head = nullptr;
 };
 
-void Linked_List::Insert(int key, float f){
+bool Linked_List::Insert(int key, float f){
     ListItem *newNode = new ListItem;
 
     newNode->key = key;
     newNode->theData= f;
     newNode->next=nullptr;
 
-    newNode->next = head;
-    head = newNode;
+    if (head == nullptr) { // If the list is empty, set the new item as head
+        head = newNode;
+        return true;
+    }
+    // Traverse to the end of the list and insert there
+    ListItem* current = head;
+    while (current->next != nullptr) {
+        current = current->next;
+    }
+    current->next = newNode; // Add the new item at the end
+    return true;
 };
 
 int Linked_List::ListLength(){
@@ -29,14 +38,24 @@ int Linked_List::ListLength(){
     return count;
 };
 
-void Linked_List::PrintList(){
+void Linked_List::PrintList() {
     ListItem *current = head;
-    while (current != nullptr)
-    {
-        cout << "Key: "<< current->key << ", Data: "<< current->theData<<endl;
+
+    // Print the header
+    cout << "Items in the List\n";
+    cout << "-----------------------------------------------------------\n";
+    cout << "Key\t\tData\n";
+    cout << "-----------------------------------------------------------\n";
+
+    // Print each item in the list
+    while (current != nullptr) {
+        cout << current->key << "\t\t" << current->theData << endl;
         current = current->next;
-    };
-};
+    }
+
+    cout << "-----------------------------------------------------------\n";  // Print a footer
+}
+
 
 Linked_List::~Linked_List(){
     ClearList();
@@ -74,8 +93,8 @@ bool Linked_List::Delete(int key){
     };
 
     //Traverse the linkedlist
-    while (current != nullptr){
-        if (current->next->key = key){
+    while (current->next != nullptr){
+        if (current->next->key == key){
             dummy = current->next;
             current->next = current->next->next;
             delete dummy;
@@ -83,21 +102,54 @@ bool Linked_List::Delete(int key){
         };
         current = current->next;   
     };
-    head = current;
     return false;
 };
 
-
-int main(){
-
-    Linked_List *thelist;
-
-    thelist = new Linked_List;
-
-    thelist->Insert(1, 2.7f);
-
-    thelist->PrintList();
-
-    // Test the list length function
-     cout << "\nList now contains " << thelist->ListLength() << " items.\n\n";
+bool Linked_List::isEmpty(){
+    ListItem *current = head;
+    if (current == nullptr){
+        return true;
+    }else{
+        return false;
+    }
 }
+
+bool Linked_List::isFull(){
+    ListItem *current = new (nothrow) ListItem;
+
+    if (current == nullptr){ // nothrow returns a nullptr rather than throwing an error
+        return true;
+    }
+    delete current;
+    return false;
+}
+
+
+bool Linked_List::Search(int key, float *retVal){
+    ListItem *current = head;
+
+    while (current != nullptr)
+    {
+       if (current->key == key){
+            *retVal = current->theData;
+            return true;
+       }
+       current = current->next;
+    }
+    return false; 
+};
+
+
+// int main(){
+
+//     Linked_List *thelist;
+
+//     thelist = new Linked_List;
+
+//     thelist->Insert(1, 2.7f);
+
+//     thelist->PrintList();
+
+//     // Test the list length function
+//      cout << "\nList now contains " << thelist->ListLength() << " items.\n\n";
+// }

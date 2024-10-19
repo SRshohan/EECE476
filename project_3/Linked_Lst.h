@@ -1,6 +1,3 @@
-#ifndef LINKED_LIST_H
-#define LINKED_LIST_H
-
 #include <iostream>
 using namespace std;
 
@@ -30,4 +27,3 @@ class Linked_List
           void PrintList();             // Print all items in the list
 };
 
-#endif
