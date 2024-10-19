@@ -74,36 +74,35 @@ void Linked_List::ClearList(){
 };
 
 
-bool Linked_List::Delete(int key){
-    ListItem *current = head;
-    ListItem *dummy = nullptr;
-
-
-    if (head == nullptr){
+bool Linked_List::Delete(int key) {
+    // Check if the list is empty
+    if (head == nullptr) {
         return false;
-    };
+    }
 
-
-    // Edge case: If head needs to delete
-    if (current->key == key){
-        dummy = current;
-        current = current->next;
-        delete dummy;
+    // Edge case: If the head needs to be deleted
+    if (head->key == key) {
+        ListItem* dummy = head; // Store the head for deletion
+        head = head->next;      // Move head to the next node
+        delete dummy;           // Delete the old head
         return true;
-    };
+    }
 
-    //Traverse the linkedlist
-    while (current->next != nullptr){
-        if (current->next->key == key){
-            dummy = current->next;
-            current->next = current->next->next;
-            delete dummy;
+    // Traverse the linked list to find the key
+    ListItem* current = head; // Start from the head
+    while (current->next != nullptr) {
+        if (current->next->key == key) { // Check the next node
+            ListItem* dummy = current->next; // Store the node to delete
+            current->next = current->next->next; // Bypass the node
+            delete dummy; // Delete the node
             return true;
-        };
-        current = current->next;   
-    };
-    return false;
-};
+        }
+        current = current->next; // Move to the next node
+    }
+
+    return false; // Key not found
+}
+
 
 bool Linked_List::isEmpty(){
     ListItem *current = head;

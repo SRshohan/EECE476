@@ -60,7 +60,7 @@ int main(int argc, char **argv)
      else
           cout << "Search result: Unable to locate item in list\n";
 
-     cout << "\n\nEnd list demonstration...";
+     cout << "\n\nEnd list demonstration..."<<endl;
 
      return 0;
 }
