@@ -33,7 +33,7 @@ The primary objectives of this lab were to:
 
 *Explanation*: This screenshot illustrates the deletion functionality of our linked list. The output before and after the deletion of specific items is shown, allowing us to verify that the delete operation works correctly. The test cases include deleting the last, first, and a middle item. For example, deleting the last item results in the following:
 
-This confirms that the item with key `5` was successfully removed.
+This confirms that the item with key `4` was successfully removed.
 
 ### Screenshot 3: Searching for Items in the List
 
