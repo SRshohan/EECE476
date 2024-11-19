@@ -12,7 +12,7 @@ int AirQualitySensor::getReading(){
     int min = 0;
     int max = 50;
 
-    int random = static_cast <double> (rand()) / static_cast <double> (RAND_MAX);
+    double random = static_cast <double> (rand()) / static_cast <double> (RAND_MAX);
 
     int result = min + random * (max - min);
 
