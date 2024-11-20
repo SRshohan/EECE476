@@ -18,13 +18,10 @@ class LinkedPriorityQueue{
     public:
         LinkedPriorityQueue();
         ~LinkedPriorityQueue();
-        void pop();
+        string pop();
         void push(int priority, string alert);
         bool isFull();
         bool isEmpty(); 
 };
-
-
-
 
 #endif
