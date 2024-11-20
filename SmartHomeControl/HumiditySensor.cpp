@@ -21,8 +21,8 @@ double HumiditySensor::getReading(){
 }
 
 
-int main(){
-    HumiditySensor hum = HumiditySensor();
-    cout << hum.getReading() << endl;
+// int main(){
+//     HumiditySensor hum = HumiditySensor();
+//     cout << hum.getReading() << endl;
 
-};
+// };

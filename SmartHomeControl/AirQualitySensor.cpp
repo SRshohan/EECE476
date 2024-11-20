@@ -21,8 +21,8 @@ int AirQualitySensor::getReading(){
 }
 
 
-int main(){
-    AirQualitySensor air = AirQualitySensor();
-    cout << air.getReading() << endl;
+// int main(){
+//     AirQualitySensor air = AirQualitySensor();
+//     cout << air.getReading() << endl;
 
-};
+// };
